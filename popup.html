@@ -16,11 +16,18 @@
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
-            color: #333;
-            background-color: #fff; /* White background color for the message */
+            color: #ffffff;
             width: 100%;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
         }
+        #imageContainer {
+            width: 300px; /* Set a width for the container */
+            margin: 20px; /* Add some margin for spacing */
+        }
+
+        /* Optional styling for the image */
+        #imageContainer img {
+            width: 100%; /* Make the image fill the container width */
+            border-radius: 5px; /* Optional: Add rounded corners */
         .button {
             margin-top: 10px;
             padding: 15px 30px;
@@ -45,7 +52,9 @@
     <div id="message">PhotoPaste</div>
 
     <div class="large-space"></div> <!-- Add an empty div for larger space -->
-
+    <div id="imageContainer">
+        <img src="copy" alt="Description of the image">
+    </div>
     <button class="button" id="click-me">Copy</button>
 
     <script>

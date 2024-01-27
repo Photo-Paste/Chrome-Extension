@@ -7,7 +7,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* Light grey background */
+            background-color: #000000; /* Light grey background */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -21,10 +21,8 @@
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
-            color: #333;
-            background-color: #fff; /* White background color for the message */
+            color: #ffffff;
             width: 100%;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
         }
         .button {
             display: block;
@@ -49,10 +47,14 @@
         a:hover {
             text-decoration: underline;
         }
+        .large-space {
+            height: 300px;
+        }
     </style>
 </head>
 <body>
-    <div id="message">PhotoPaste</div>    
+    <div id="message">PhotoPaste</div>  
+    <div class="large-space"></div> <!-- Add an empty div for larger space -->  
     <button class="button" id="click-me">Create Account</button>
 
     <script>
