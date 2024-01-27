@@ -8,44 +8,44 @@
             width: 300px;
             padding: 10px;
             font-family: Arial, sans-serif;
+            text-align: center; /* Center content horizontally */
         }
         #message {
-            margin-bottom: 10px;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            font-family: 'Bradley Hand', cursive;
+            background-color: transparent;
         }
         .button {
-            display: block;
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 5px;
-            background-color: #4285F4;
-            color: white;
+            margin-top: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #4CAF50;
             border: none;
-            border-radius: 3px;
+            border-radius: 15px;
             cursor: pointer;
         }
         .button:hover {
             background-color: #357ae8;
         }
+
+        .large-space {
+            height: 300px;
+        }
     </style>
 </head>
 <body>
-    <div id="message">PhotoPaste</div>    
+    <div id="message">PhotoPaste</div>
 
-<style>
-    #message {
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px; /* Add padding for better visual appearance */
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    background-color: #fff; /* White background color for the message */
-}
-</style>
+    <div class="large-space"></div> <!-- Add an empty div for larger space -->
 
-    <button class="button" id="click-me">Click Me</button>
-    <a href="https://www.example.com" target="_blank">Visit Our Website</a>
+    <button class="button" id="click-me">Copy</button>
 
     <script>
         document.getElementById('click-me').addEventListener('click', function() {
