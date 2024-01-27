@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extension Popup</title>
+    <style>
+        body {
+            width: 200px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        #message {
+            margin-bottom: 10px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 5px;
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Hello, Chrome Extension!</div>
+    <button class="button" id="click-me">Click Me</button>
+    <a href="https://www.example.com" target="_blank">Visit Our Website</a>
+
+    <script>
+        document.getElementById('click-me').addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+    </script>
+</body>
+</html>

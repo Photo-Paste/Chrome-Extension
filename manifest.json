@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+    "name": "Chrome_Extension",
+    "version": "1.0",
+    "description": "Brief description",
+    "permissions": ["storage"],
+    "browser_action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
