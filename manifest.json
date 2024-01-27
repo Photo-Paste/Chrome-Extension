@@ -1,11 +1,11 @@
 {
     "manifest_version": 2,
-    "name": "Chrome_Extension",
+    "name": "PhotoPaste",
     "version": "1.0",
     "description": "Brief description",
     "permissions": ["storage"],
     "browser_action": {
-      "default_popup": "popup.html"
+      "default_popup": "create.html"
     }
   }
   
