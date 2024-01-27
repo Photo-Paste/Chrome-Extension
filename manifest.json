@@ -3,9 +3,15 @@
     "name": "PhotoPaste",
     "version": "1.0",
     "description": "Brief description",
+    "icons": {
+      "16": "Chrome-Extension/copy-to-clipboard.ico",
+      "48": "Chrome-Extension/copy-to-clipboard.ico",
+      "128": "Chrome-Extension/copy-to-clipboard.ico"
+    },
     "permissions": ["storage"],
     "browser_action": {
       "default_popup": "create.html"
+    
     }
   }
   
