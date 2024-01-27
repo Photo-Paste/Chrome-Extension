@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creating Account</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light grey background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 500px; /* Full viewport height */
+            width: 300px;
+        }
+        #message {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            background-color: #fff; /* White background color for the message */
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        }
+        .button {
+            display: block;
+            width: 90%; /* Slightly less than full width */
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Button shadow */
+        }
+        .button:hover {
+            background-color: #357ae8;
+        }
+        a {
+            margin-top: 15px;
+            color: #4285F4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">PhotoPaste</div>    
+    <button class="button" id="click-me">Create Account</button>
+
+    <script>
+        document.getElementById('click-me').addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+    </script>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creating Account</title>
+    <style>
+        body {
+            height: 500px;
+            width: 300px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        #message {
+            margin-bottom: 10px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 5px;
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">PhotoPaste</div>    
+
+<style>
+    #message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px; /* Add padding for better visual appearance */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* White background color for the message */
+}
+</style>
+
+    <button class="button" id="click-me">Create Account</button>
+    <a href="https://www.example.com" target="_blank">Visit Our Website</a>
+
+    <script>
+        document.getElementById('click-me').addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+    </script>
+</body>
+</html>
+-->

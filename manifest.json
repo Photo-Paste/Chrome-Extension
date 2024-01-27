@@ -5,7 +5,7 @@
     "description": "Brief description",
     "permissions": ["storage"],
     "browser_action": {
-      "default_popup": "popup.html"
+      "default_popup": "create.html"
     }
   }
   
