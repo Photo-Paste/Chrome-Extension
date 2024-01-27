@@ -1,17 +1,25 @@
 {
-    "manifest_version": 2,
-    "name": "PhotoPaste",
-    "version": "1.0",
-    "description": "Brief description",
-    "icons": {
-      "16": "copy-to-clipboard (1).ico",
-      "48": "copy-to-clipboard (2).ico",
-      "128": "copy-to-clipboard (3).ico"
-    },
-    "permissions": ["storage"],
-    "browser_action": {
-      "default_popup": "create.html"
-    
-    }
+  "manifest_version": 3,
+  "name": "PhotoPaste",
+  "version": "1.0",
+  "description": "Brief description",
+  "icons": {
+    "16": "copy-to-clipboard.ico"
+  },
+  "permissions": [
+    "storage",
+    "identity"
+  ],
+  "action": {
+    "default_popup": "create.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "oauth2": {
+    "client_id": "467140296981-2sbft8pgn0icoivifpj2sv70dgtcrcuv.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+    ]
   }
-  
+}

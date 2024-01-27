@@ -2,56 +2,12 @@
 <html>
 <head>
     <title>Extension Popup</title>
-    <style>
-        body {
-            height: 500px;
-            width: 300px;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-            text-align: center; /* Center content horizontally */
-        }
-        #message {
-            text-align: center;
-            margin-top: 20px;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            background-color: #fff; /* White background color for the message */
-            width: 100%;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-        }
-        .button {
-            margin-top: 10px;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
-            background-color: #4CAF50;
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #357ae8;
-        }
-
-        .large-space {
-            height: 300px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
     <div id="message">PhotoPaste</div>
-
-    <div class="large-space"></div> <!-- Add an empty div for larger space -->
-
+    <div class="large-space"></div>
     <button class="button" id="click-me">Copy</button>
-
-    <script>
-        document.getElementById('click-me').addEventListener('click', function() {
-            alert('Button clicked!');
-        });
-    </script>
+    <script src="popup.js"></script>
 </body>
 </html>
