@@ -2,7 +2,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #222730;
+    background: linear-gradient(45deg, #222730, #4b6cb7, #8ED1FC, #C0C0C0, #FF0080); /* Darker shade of white */
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,12 +13,30 @@ body {
     width: 150px;
 }
 
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 75%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 25%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 #message {
     text-align: center;
     margin: 10px;
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -26,11 +46,12 @@ body {
     width: 60px;
     height: 60px;
     margin-top: 10%;
-    background-color: #4285F4;
+    background: linear-gradient(45deg, #4285F4, #76a9f9);
     border: none;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-weight: bold;
     font-size: 16px;
     text-align: center;
     line-height: 60px;
@@ -39,12 +60,12 @@ body {
 }
 
 #copy-button:hover {
-    background-color: #357ae8;
+    background: linear-gradient(45deg, #357ae8, #5a8ed4);
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 #message-dropdown {
-    margin: 20px 10px;
+    margin: 0px 10px 20px 10px;
     width: 100px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -59,6 +80,7 @@ body {
     padding: 10px;
     background-color: white;
     color: black;
+    width: 100px;
 }
 
 .messages-overlay {
