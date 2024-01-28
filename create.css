@@ -64,9 +64,9 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-#message-dropdown {
+#message-dropdoelkferlkfwwn {
     margin: 0px 10px 20px 10px;
-    width: 100px;
+    width: 50px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -81,6 +81,15 @@ body {
     background-color: white;
     color: black;
     width: 100px;
+}
+
+.dropdown-option {
+    color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255,  .50);
+    height: 20vh;
+
 }
 
 .messages-overlay {
