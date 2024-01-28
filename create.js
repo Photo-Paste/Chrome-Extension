@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 let messageOptions = [];
 
 function fetchMessages(email) {
-    fetch(`http://68.183.156.19/records/${email}`)
+    fetch(`https://photo-paste.com/records/${email}`)
         .then(response => response.json())
         .then(messages => {
             if (messages && messages.length > 0) {

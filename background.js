@@ -44,7 +44,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 });
 
 function fetchUserInfo(email) {
-    return fetch(`http://68.183.156.19/users/${email}`)
+    return fetch(`https://photo-paste.com/users/${email}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Fetch failed, trying to create a new account');
@@ -65,7 +65,7 @@ function createNewUser(email) {
         active: true
     };
 
-    return fetch(`http://68.183.156.19/users/${email}`, {
+    return fetch(`https://photo-paste.com/users/${email}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
