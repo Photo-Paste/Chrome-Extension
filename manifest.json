@@ -4,7 +4,9 @@
   "version": "1.0",
   "description": "Brief description",
   "icons": {
-    "16": "copy-to-clipboard.ico"
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   },
   "permissions": [
     "storage",
@@ -17,11 +19,7 @@
     "service_worker": "background.js"
   },
   "oauth2": {
-<<<<<<< HEAD
-    "client_id": "467140296981-28dcgais7u17jn2stjt9n1fk02059jnj.apps.googleusercontent.com",
-=======
     "client_id": "467140296981-2sbft8pgn0icoivifpj2sv70dgtcrcuv.apps.googleusercontent.com",
->>>>>>> 350f0b669756d8cc39ea1be3acbb3fc619507fab
     "scopes": [
       "https://www.googleapis.com/auth/userinfo.email"
     ]
