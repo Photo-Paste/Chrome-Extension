@@ -27,7 +27,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             fetch('https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=' + token)
                 .then(response => response.json())
                 .then(userInfo => {
-                    sendResponse({ email: userInfo.email });
+                    if (userInfo && userInfo.email) {
+                        fetchUserInfo(userInfo.email).then(userDetails => {
+                            sendResponse({ email: userInfo.email, userDetails: userDetails });
+                        });
+                    }
                 })
                 .catch(error => {
                     console.error(error);
@@ -38,3 +42,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         return true;
     }
 });
+
+function fetchUserInfo(email) {
+    return fetch(`http://68.183.156.19/users/${email}`)
+        .then(response => response.json())
+        .catch(error => console.error(error));
+}
