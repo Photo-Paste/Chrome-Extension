@@ -19,7 +19,7 @@ function fetchMessages(email) {
         .then(response => response.json())
         .then(messages => {
             if (messages && messages.length > 0) {
-                populateDropdown(messages.slice(-5));
+                populateDropdown(messages.slice(-5).reverse());
             }
         })
         .catch(error => {
