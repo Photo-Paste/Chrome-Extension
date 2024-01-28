@@ -44,7 +44,44 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 });
 
 function fetchUserInfo(email) {
+    // First, try to fetch user info with a GET request
     return fetch(`http://68.183.156.19/users/${email}`)
-        .then(response => response.json())
-        .catch(error => console.error(error));
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Fetch failed, trying to create a new account');
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error('GET request failed:', error.message);
+            // If GET request fails, attempt to create user with POST request
+            return createNewUser(email);
+        });
+}
+
+function createNewUser(email) {
+    const postData = {
+        name: "Test",
+        is_admin: false,
+        profile_image_url: "profile",
+        active: true
+    };
+
+    return fetch(`http://68.183.156.19/users/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to create new user');
+        }
+        return response.json();
+    })
+    .catch(error => {
+        console.error('POST request failed:', error.message);
+        return { error: 'Failed to fetch or create user' };
+    });
 }
