@@ -44,7 +44,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 });
 
 function fetchUserInfo(email) {
-    // First, try to fetch user info with a GET request
     return fetch(`http://68.183.156.19/users/${email}`)
         .then(response => {
             if (!response.ok) {
@@ -54,7 +53,6 @@ function fetchUserInfo(email) {
         })
         .catch(error => {
             console.error('GET request failed:', error.message);
-            // If GET request fails, attempt to create user with POST request
             return createNewUser(email);
         });
 }
@@ -67,7 +65,7 @@ function createNewUser(email) {
         active: true
     };
 
-    return fetch(`http://68.183.156.19/users/`, {
+    return fetch(`http://68.183.156.19/users/${email}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
