@@ -5,7 +5,6 @@ chrome.runtime.onInstalled.addListener(() => {
             return;
         }
 
-        // Fetch user info
         fetch('https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=' + token)
             .then(response => response.json())
             .then(userInfo => {
@@ -17,7 +16,6 @@ chrome.runtime.onInstalled.addListener(() => {
     });
 });
 
-// Listen for messages from content scripts
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.message === "getUserEmail") {
         chrome.identity.getAuthToken({ 'interactive': false }, function(token) {
@@ -37,6 +35,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                 });
         });
 
-        return true; // Indicates that the response is asynchronous
+        return true;
     }
 });
