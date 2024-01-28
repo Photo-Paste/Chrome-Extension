@@ -33,38 +33,30 @@ function populateDropdown(messages) {
     messageOptions = [];
     dropdown.innerHTML = '';
 
-    messages.forEach((message, index) => {
+    messages.forEach((message) => {
         const option = document.createElement('div');
-        option.value = index;
         option.textContent = message.text;
         option.classList.add('dropdown-option');
-        
+        option.style.position = 'relative'; // Set the position of the option container to relative
+
+        // Create an img element for the SVG icon
+        const copyIcon = document.createElement('img');
+        copyIcon.src = 'clipboard.svg'; // Path to your SVG icon
+        copyIcon.alt = 'Copy'; // Alt text for accessibility
+        copyIcon.classList.add('copy-icon'); // Add any styling classes here
+        copyIcon.style.cssText = "position: absolute; top: 5px; right: 5px; cursor: pointer; width: 20px; height: 20px;"; // Position and size the SVG icon
+
+        // Attach the click event listener to the SVG icon
+        copyIcon.addEventListener('click', function() {
+            navigator.clipboard.writeText(message.text)
+                .then(() => {
+                    console.log('Message copied to clipboard');
+                })
+                .catch(err => console.error('Failed to copy text: ', err));
+        });
+
+        // Append the SVG icon to the option container
+        option.appendChild(copyIcon);
         dropdown.appendChild(option);
-
-        messageOptions.push(message.text);
     });
-}
-
-function copySelectedMessage() {
-    const dropdown = document.getElementById('message-dropdown');
-    const selectedMessage = messageOptions[dropdown.value];
-    if (selectedMessage) {
-        navigator.clipboard.writeText(selectedMessage)
-            .then(() => {
-                console.log('Message copied to clipboard');
-            })
-            .catch(err => console.error('Failed to copy text: ', err));
-    } else {
-        console.log('No message selected or available to copy');
-    }
-}
-
-function toggleMessagesDisplay() {
-    const dropdown = document.getElementById('message-dropdown');
-    const isVisible = dropdown.style.display === 'block';
-    dropdown.style.display = isVisible ? 'none' : 'block';
-
-    if (!isVisible) {
-        copySelectedMessage();
-    }
 }
