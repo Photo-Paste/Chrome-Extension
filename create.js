@@ -30,13 +30,13 @@ function fetchMessages(email) {
 
 function populateDropdown(messages) {
     const dropdown = document.getElementById('message-dropdown');
-    messageOptions = []; // Reset the array
+    messageOptions = [];
     dropdown.innerHTML = '';
 
     messages.forEach((message, index) => {
         const option = document.createElement('option');
         option.value = index;
-        option.textContent = `Message ID: ${message.id}, Text: ${message.text}`;
+        option.textContent = message.text;
         dropdown.appendChild(option);
 
         messageOptions.push(message.text);
