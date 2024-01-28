@@ -37,17 +37,17 @@ function populateDropdown(messages) {
         const option = document.createElement('div');
         option.textContent = message.text;
         option.classList.add('dropdown-option');
-        option.style.position = 'relative'; // Set the position of the option container to relative
+        option.style.position = 'relative'; // Ensure the option container has a relative position
 
         // Create an img element for the SVG icon
         const copyIcon = document.createElement('img');
         copyIcon.src = 'clipboard.svg'; // Path to your SVG icon
         copyIcon.alt = 'Copy'; // Alt text for accessibility
-        copyIcon.classList.add('copy-icon'); // Add any styling classes here
-        copyIcon.style.cssText = "position: absolute; top: 5px; right: 5px; cursor: pointer; width: 20px; height: 20px;"; // Position and size the SVG icon
+        copyIcon.classList.add('copy-icon'); // Add styling classes for the icon
+        copyIcon.style.cssText = "position: absolute; top: 5px; right: 5px; cursor: pointer; width: 20px; height: 20px;"; // Style the SVG icon
 
-        // Attach the click event listener to the SVG icon
-        copyIcon.addEventListener('click', function() {
+        // Attach the click event listener to the entire 'option' div
+        option.addEventListener('click', function() {
             navigator.clipboard.writeText(message.text)
                 .then(() => {
                     console.log('Message copied to clipboard');

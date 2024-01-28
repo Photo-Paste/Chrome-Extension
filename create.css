@@ -2,27 +2,31 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color:#E3E4DC;
-    animation: Gradient 15s ease infinite;
+    background: linear-gradient(#fbfbf3 0%, #ffffff 50%, #ffffff 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 200px;
-    width: 200px;
     overflow: hidden;
+    width: 300px;
+    height: 100vh;
+        display:flex;
+
 }
 
 #message-dropdown {
     height:200px;
 }
 
+
 #message {
     text-align: center;
     margin: 10px;
     font-size: 24px;
     font-weight: bold;
-    color: #ffffff;
+    color: black;
     font-family: Lucida Console, Monospace;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -33,8 +37,15 @@ body {
     padding: 14px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #ffffff;
-    max-height: 10%;
+    background-color: #edf0ba;
+    max-height: 50px;
     margin: 6px;
     overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    cursor: pointer
 }
+
+.dropdown-option::-webkit-scrollbar {
+    display: none;
+  }
