@@ -34,9 +34,11 @@ function populateDropdown(messages) {
     dropdown.innerHTML = '';
 
     messages.forEach((message, index) => {
-        const option = document.createElement('option');
+        const option = document.createElement('div');
         option.value = index;
         option.textContent = message.text;
+        option.classList.add('dropdown-option');
+        
         dropdown.appendChild(option);
 
         messageOptions.push(message.text);
