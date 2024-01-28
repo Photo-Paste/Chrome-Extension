@@ -17,7 +17,7 @@
     "service_worker": "background.js"
   },
   "oauth2": {
-    "client_id": "467140296981-qvo98deeuv5oj88pt76gqjmopdoiuv2t.apps.googleusercontent.com",
+    "client_id": "467140296981-2sbft8pgn0icoivifpj2sv70dgtcrcuv.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/userinfo.email"
     ]
