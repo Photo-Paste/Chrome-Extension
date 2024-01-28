@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "PhotoPaste",
   "version": "1.0",
-  "description": "Brief description",
+  "description": "Effortlessly share text between your phone and laptop! Scan text on any website with our extension, then copy and paste seamlessly with minimal effort. Simplify your cross-device text sharing experience today!",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
